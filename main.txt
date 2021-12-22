@@ -1,4 +1,0 @@
-this repo is my way to learn front end.
-i start with HTML, CSS and JS.
-finally im going to learn React js.
-i start to learn HTML daily and you can see what im doing, day by bay.
