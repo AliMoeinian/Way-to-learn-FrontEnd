@@ -31,16 +31,12 @@
             <i> : italic
             <sub> : subscript
             <sup> : superscript
-            <ins> : insert        
-            <del> : delete 
     -->
     <p>This is a simple p tag </p>
     <p>bold tag : <b>BOLD</b></p>
     <p>italic tag : <i>ITALIC</i></p>
     <p>sub tag : CO<sub>2</sub></p>
     <p>sup tag : 4<sup>th</sup></p>
-    <p>ins tag : <ins>Inserted text here</ins></p>
-    <p>del tag : last price : <del>20000000 T</del></p>
     <hr>
     <!--
         &nbsp (not breaking space) : this keyword work like a space 
@@ -61,7 +57,83 @@
                           the structure of web page, but they do add extra information
                           to the pages
     -->
-    
+    <!--
+        strong tag : the content has strong importance
+                     its not for make a text Bold or something else, its semantic
+    -->
+    <p>This part of text is very <strong>important</strong>.</p>
+    <!--
+        em tag (emphasis) : to define emphasized text
+                            its a semantic tag, dont use it to make a text italic
+    -->
+    <p>We eant to <em>emphasize</em> this part of text</p>
+    <hr>
+    <!--
+        Quotation : we have 2 ways to show quotation :
+                    1) <blockquote> : use for longer quotes that take an entire paragraph
+                    2) <q> (quotation) : use for shorter quotes
+    -->
+    <p>Alan Kay inventor of OOP programming said : </p>
+    <blockquote>The best way to predict the future is to invent it.</blockquote>
+    <q>If you don't fail at least 90% of the time, you're not aiming high enough.</q>
+    <hr>
+    <!--
+        abbr tag (abbreviation)
+    -->
+    <p><abbr title="Domain Name System">DNS</abbr></p>
+    <P><abbr title="Hyper Text Markup Language">HTML</abbr></P>
+    <p><abbr title="Cascading Style Sheet">CSS</abbr></p>
+    <hr>
+    <!--
+        cite tag : a quotation from or reference to a book, paper. 
+                   this tag should not be used for an person's name.
+                   dont use this tag to make your text italic.
+        dfn tag (Definition) : The first time you explain some new terminology in a document.
+                               some browsers make dfn tag, italic so be aware of that.
+    -->
+    <p><cite>A canon of medicine</cite> by <em>Ibn Sina</em> is still very useful.</p>
+    <p>A <dfn>black hole</dfn> is a region in space.</p>
+    <hr>
+    <!--
+        address tag : container for contact details for author of the page.
+    -->
+    <address>
+        <p>Iran, Esfahan, X street.</p>
+        <p>Phone Number : 09123333333 (Its Fake) </p>
+    </address>
+    <hr>
+    <!--
+        ins tag (inserted) : to show a content that has been inserted to a document.
+        del tag (delete) : opposite of ins tag
+        s tag ( ? ) : indicate that something is no longer accurate or relavant.
+    -->
+    <p>Grammer check : <del>I am</del> <ins>We</ins> are feeling very good.</p>
+    <p>Old Price: <s>10000000 T</s></p>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
