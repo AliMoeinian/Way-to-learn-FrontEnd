@@ -16,7 +16,7 @@
         h tags (heading) :  6 levels of heading tag
         Every page should only have one h1 tag
     -->
-    <h1>h1 tag : most imposrtant heading of a web page</h1>
+    <h1 id="h1 tag">h1 tag : most imposrtant heading of a web page</h1>
     <h2>h2 tag : SubHeading tag</h2>
     <h3>h3 tag </h3>
     <h4>h4 tag </h4>
@@ -46,7 +46,7 @@
     <!--
         br tag (break line) : work like enter buttom
     -->
-    <p>Tset for :<br /> br tag</p>
+    <p>Tset for :<br> br tag</p>
     <hr>
     <!--
         hr tag (Horizontal Rule)
@@ -148,29 +148,45 @@
         </li>
     </ol>
     <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!--
+        a tag (anchor) : make links
+        href (Hypertext REFerence)
+    -->
+    <p>List of Websites that i use very much every day : </p>
+    <ol>
+        <li><a href="https://www.youtube.com">YouTube</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="https://www.w3schools.com/">w3schools</a></li>
+    </ol>
+    <a href="training.html">👉 Check out my Trainig page 👈</a><br>
+    <!--
+        mailto link : Type of HTMLl link that activates the default mail client.
+    -->
+    <a href="mailto:eng.alimoeinian1379@gmail.com">🤍 Checkout My Email</a><br>
+    <!--
+        target attribute : ways of openning links
+            1 - _blank : new window
+            2 - _self : same window
+            3 - _parent : parent frame
+            4 - _top : full body window
+    -->
+    <p>Here is test of all target attribute :</p>
+    <ul> 
+        <ol>_blanck : <a href="https://www.w3schools.com/" target="_blank">w3schools</a></ol>
+        <ol>_self : <a href="https://www.w3schools.com/" target="_self">w3schools</a></ol>
+        <ol>_parent : <a href="https://www.w3schools.com/" target="_parent">w3schools</a></ol>
+        <ol>_top : <a href="https://www.w3schools.com/" target="_top">w3schools</a></ol>
+    </ul>
+    <hr>
+    <!--
+        Link to specific part of the same page
+    -->
+    <p>Here is how we link other parts of one page together : </p>
+    <ol>
+        <li>Set ID for the tag (like Top)</li>
+        <li>set href="#top"</li>
+    </ol>
+    <a href="#h1 tag">Go to h1 tag at top of this page</a><br>
 
 </body>
 </html>
