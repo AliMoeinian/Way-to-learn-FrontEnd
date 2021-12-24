@@ -238,7 +238,159 @@
             This is JavaScript picture and im going to learn it soooooooon !
         </figcaption>
     </figure>
+    <hr>
+    <!--
+        table tag : use to create a table
+        tr tag (table row) 
+        td tag (table data)
+        th tag (table heading)
+        border attribute : if equals to 0 you will see no line and if equals to 1
+                           you can see the table with borders.
+    -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Age</th>
+        </tr>
 
+        <tr>
+            <td>Ali Moeinian</td>
+            <td>Esfahan</td>
+            <td>20</td>
+        </tr>
+
+        <tr>
+            <td>Ali Kazemi</td>
+            <td>Tehran</td>
+            <td>80</td>
+
+        </tr>
+    </table>
+    <hr>
+    <table border="0">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ali Moeinian</td>
+            <td>Esfahan</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Ali Kazemi</td>
+            <td>Tehran</td>
+            <td>80</td>
+
+        </tr>    
+    </table>
+    <hr>
+    <!--
+        colspan attribute (column span) : spanning columns
+        colsapn = "Number" (number shows the cells you want to merge)
+    -->
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+            <th>12am</th>
+        </tr>
+        <tr>
+            <th>Monday</th>
+            <td colspan="2">Geography</td>
+            <td>Math</td>
+            <td>Art</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td colspan="3">Gym</td>
+            <td>Home Ec</td>
+        </tr>
+    </table>
+    <hr>
+    <!--
+        rowspan attribute
+    -->
+    <table border="2" align="center">
+        <tr align="center">
+            <th></th>
+            <th>ABC</th>
+            <th>BBC</th>
+            <th>CNN</th>
+        </tr>
+        <tr align="center">
+            <th>6pm - 7pm</th>
+            <td rowspan="2">Movie</td>
+            <td>Comedy</td>
+            <td>News</td>
+        </tr>
+        <tr align="center">
+            <th>7pm - 8pm</th>
+            <td>Sport</td>
+            <td>Current Affairs</td>
+        </tr>
+    </table>
+    <hr>
+    <!--
+        thead tag (table head) : the heading of the table
+        tbody tag (table body) : the body of the table
+        tfoot tag (table footer) : the footer of the table
+    -->
+    <p>This table shows number of new cases and Deathes beacuse of corona virus in Iran : </p>
+    <table border="5" align="center" >
+        <thead bgColor="yellow">
+            <tr align="center">
+                <th>Date</th>
+                <th>New Cases</th>
+                <th>Death</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td><i>December 22</i></td>
+                <td>2103</td>
+                <td>44</td>
+            </tr>
+            <tr align="center">
+                <td><i>December 21</i></td>
+                <td>2413</td>
+                <td>43</td>
+            </tr>
+            <tr align="center">
+                <td><i>December 20</i></td>
+                <td>2390</td>
+                <td>41</td>
+            </tr>
+            <tr align="center">
+                <td><i>December 19</i></td>
+                <td>1968</td>
+                <td>50</td>
+            </tr>
+            <tr align="center">
+                <td><i>December 18</i></td>
+                <td>1361</td>
+                <td>41</td>
+            </tr>
+            <tr align="center">
+                <td><i>December 17</i></td>
+                <td>2196</td>
+                <td>46</td>
+            </tr>
+        </tbody> 
+        <tfoot bgcolor="red">  
+            <tr>
+                <td><b>Total 6 days</b></td>
+                <td><b>Sum : 12431</b></td>
+                <td><b>Sum : 265</b></td>
+            </tr>
+        </tfoot> 
+    </table>
+    <hr>
+    
 
 </body>
 </html>
