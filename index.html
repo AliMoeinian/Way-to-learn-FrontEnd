@@ -418,7 +418,7 @@
         when you define a form tag, then you need to use input tags to get data from the user.
         input tag have different types, which we are going to learn them : 
         text, password, radio, checkbox, drop down, submit, image, upload file
-        be aware thattext area is not a type of input  tag!
+        be aware that text area and select tags are not a type of input tag!
         
         also we use different attributes to shape the input tags, like : size, maxlength,name,..
         name : we set a name for each input tag that let the server know which form control, each piece of data was entered into.
@@ -436,26 +436,40 @@
                                                     When submitted, there is just the one value in the response - the radio button you selected.
                                                    6 - check this link please : https://stackoverflow.com/questions/7470268/html-input-name-vs-id
     -->
+    <!--
+        ❌❌ In span and div elements, a name attribute is invalid in all HTML versions. If used, it will simply be ignored,
+            except in the sense that it is stored (like any invalid attributes)
+            in the attributes property in the DOM and can be accessed in client-side scripting
+    -->
+    <!--
+        Every form must have an action attribute
+    -->
     <form action="#">
         <p>Using value attribute instead of p tag : </p>
         <input type="text" name="username" id="username" value="username : ">
         <br>
-        <p>Using p tags instead of value attribute : </p>
-        <p> username : 
-            <input type="text" name="username" id="username" maxlength="20">
-        </p>
-        <p>Password : 
-            <input type="password" name="password" id="password" minlength="8">
-        </p>
-        <p>Text Area : <br> 
+        <p>Using label tags instead of value attribute : </p>
+        <label for="username">username : </label>
+            <input type="text" name="username" id="username" maxlength="20"><br><br>
+       
+        <label for="password">password :</label>
+            <input type="password" name="password" id="password" minlength="8"><br><br>
+
+        <label for="textarea">Text Area :</label><br> 
             <textarea name="textarea" id="textarea" cols="30" rows="10">Enter your comment please ...</textarea>
-        </p>
-        <p>Radio button (version 1) : <br>
+        <!--
+            in rdio we want to choose only 1 item, so name of all input tags must be the same
+            in here, name of tags are "gender"
+        -->
+        <p>Radio button (version 1 - not recommended) : <br>
             <input type="radio" name="gender" id="male" value="male"> male
             <input type="radio" name="gender" id="female" value="female"> female
             <input type="radio" name="gender" id="OtherGender" value="other"> other
         </p>
-        <p>Radio button (version 2) : <br>
+        <!--
+            if you use label tag, id of label tag and the tag you want to connect together must be the same
+        -->
+        <p>Radio button (version 2 - best choice) : <br>
             <label for="male">male</label>
             <input type="radio" name="gender" id="male" value="male">
             <label for="female">female</label>
@@ -463,7 +477,7 @@
             <label for="other">other</label>
             <input type="radio" name="gender" id="OtherGender" value="other">
         </p>
-        <p>Your Skills (version 1) : </p>
+        <p>Your Skills (version 1 - best choice) : </p>
         <label for="c++">c++</label>
         <input type="checkbox" name="c++" id="c++">
         <label for="python">python</label>
@@ -477,40 +491,79 @@
         <label for="rust">rust</label>
         <input type="checkbox" name="rust" id="rust">
 
-        <p>Your Skills (version 2) : </p>
-        <input type="checkbox" name="c++" id="c++">c++
+        <p>Your Skills (version 2 - not recommended) : </p>
+        <!--
+            checked attribute is a pre-selected choice
+        -->
+        <input type="checkbox" name="c++" id="c++" checked>c++
         <input type="checkbox" name="python" id="python">python
         <input type="checkbox" name="php" id="php">php
         <input type="checkbox" name="c#" id="c#">c#
-        <input type="checkbox" name="go" id="go">go
+        <input type="checkbox" name="go" id="go" checked>go
         <input type="checkbox" name="rust" id="rust">rust
+    </form> <br><br>
+    <!--
+        DropDown list box
+        🛑 If user need to see all options immediately, radio bottons are better choice
+        🛑 If there is a very long list of option, drop down list is better choice
+        🛑
+    -->
+    <form action="#">
+        <label for="fav_laptop">Chooe you favorite laptop : </label>
+            <select name="fav_laptop" id="fav_laptop">
+                <option value="asus">Asus</option>
+                <option value="dell">Del</option>
+                <option value="hp">HP</option>
+                <option value="lenovo">Lenovo</option>
+            </select>
     </form>
     <form action="#">
-        <p>What is your favorite brand of laptop (you can choose only one) ? </p>
-        <select name="fav_laptop" id="fav_laptop">
-            <option value="asus">Asus</option>
-            <option value="dell">Del</option>
-            <option value="hp">HP</option>
-            <option value="lenovo">Lenovo</option>
-        </select>
-    </form>
+    <!--
+        selected attribute will show a pre-selected choice
+    -->
+        <p>What is your favorite brand of laptop ? </p>
+            <select name="fav_laptop" id="fav_laptop">
+                <option value="asus">Asus</option>
+                <option value="dell">Del</option>
+                <option value="hp">HP</option>
+                <option value="lenovo" selected>Lenovo</option>
+            </select>
+    </form> <br><br>
     <form action="#">
-        <p>What is your favorite brand of laptop (you can choose more than one) ? </p>
-        <select name="fav_laptop" id="fav_laptop" multiple="multiple">
-            <option value="asus" selected="selected">Asus</option>
-            <option value="dell" selected="selected">Del</option>
-            <option value="hp" selected="selected">HP</option>
-            <option value="lenovo" selected="selected">Lenovo</option>
-        </select>
-    </form>
-    <form action="#">
-        <p>please upload your file :</p>
-        <input type="file" name="file" id="file"><br>
+        <label for="file">Please Upload your file here :</label>
+        <input type="file" name="file" id="file"> <br>
         <input type="submit" value="submit">
     </form>
     <!--
-        many finput tags are written but i need to describe all of them.
-        so it may take time (❁´◡`❁)
+        use image button
     -->
+    <form action="#">
+        <label for="email">please write your email : </label>
+        <input type="text" name="email" id="email">
+        <input type="image" src="images/submit.png" alt="submit button" width="90" height="40">
+    </form> <br><br>
+
+    <!--
+        here you can see 2 common ways of using label tag
+    -->
+    <form action="#">
+        <!--Way 1-->
+        <label>Age : <input type="text" name="age" id="age"> </label> <br><br>
+        <!--Way 2-->
+        <label for="age2">Age :</label>
+        <input type="text" name="age2" id="age2">
+    </form>
+    <!--
+        Grouping form elements : Now we want to group form elements
+        fieldset tag : group related form controls together
+        legend tag : this tag comes after fieldset tag and contains a caption for the group
+        ⭕ we will lwarn about style attribute soon
+    -->
+    <fieldset style="width:0px">
+        <legend Align="center"><b>Sign In</b></legend>
+        <label>Email : <input type="email" name="email" id="email"> </label> <br><br>
+        <label>Password : <input type="password" name="password" id="password"> </label> <br>
+        <label><input type="submit"> </label>
+    </fieldset>
 </body>
 </html>
