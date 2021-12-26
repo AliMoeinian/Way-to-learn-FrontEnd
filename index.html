@@ -392,7 +392,7 @@
     </table>
     <hr>
     <!--
-        Now go and check my training page.
+        ❓❓❓ Now go and check my training page.
         i sove 13 examples from tables.
         examples start from easy to hard, so do your best (☞ﾟヮﾟ)☞
     -->
@@ -415,6 +415,8 @@
         <p>Here is just a form tag.</p>
     </form>
     <!--
+        When ever you want to collect inforamtion from visitors, you will need a form which define with a <form> tag.
+
         when you define a form tag, then you need to use input tags to get data from the user.
         input tag have different types, which we are going to learn them : 
         text, password, radio, checkbox, drop down, submit, image, upload file
@@ -559,11 +561,55 @@
         legend tag : this tag comes after fieldset tag and contains a caption for the group
         ⭕ we will lwarn about style attribute soon
     -->
+    <!--
+        sometimes, an input must be entered
+        we name it : form validation
+        validation helps to ensure the user enters information in a form
+        Benefits : 1 - reduce the amount of work the server has to do
+                   2 - enables users to see if there are problems with he form, faster
+        to add validation to a form, we need to set required attribute for the input tag we want.
+
+    -->
     <fieldset style="width:0px">
         <legend Align="center"><b>Sign In</b></legend>
-        <label>Email : <input type="email" name="email" id="email"> </label> <br><br>
-        <label>Password : <input type="password" name="password" id="password"> </label> <br>
+        <label>Email : <input type="email" name="email" id="email" required> </label> <br><br>
+        <label>Password : <input type="password" name="password" id="password" required> </label> <br>
         <label><input type="submit"> </label>
-    </fieldset>
+    </fieldset> <br><br>
+    <!--
+        Date Input : in many registration forms, we need to confirm our birthday to be over 18
+    -->
+    <form action="#">
+        <label>Birthday : <input type="date" name="date" id="date"> </label>
+        <input type="submit">
+    </form> <br><br>
+    <!--
+        for example you have a site, that works with different URLs
+        i mean, the user can write a URL in your site (or what ever !)
+    -->
+    <form action="#">
+        <label>Go to : <input type="url" name="url" id="url"> </label>
+        <input type="submit" value="Search">
+    </form> <br><br>
+    <!--
+        for example you want to write a search tool
+        placeholder attribute : on any text input you can use this attribute.
+                                it will show  a text inside the input place and when user
+                                start to type, it will disappear
+    -->
+    <form action="#">
+        <p>without placeholder attribute 👇</p>
+        <label>Searching tool : <input type="search" name="search" id="search"> </label>
+        <input type="submit" value="search"> <br>
+        <p>With place holder attribute 👇</p>
+        <label><input type="search" name="search" id="search" placeholder="Enter keyword..."> </label>
+        <input type="submit" value="search"> <br>
+    </form>
+    <hr>
+    <!--
+        ❓❓❓ Now go and check my training page.
+        i sove  x  examples from forms.
+        examples start from easy to hard, so do your best (☞ﾟヮﾟ)☞
+    -->
 </body>
 </html>
